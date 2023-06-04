@@ -40,12 +40,6 @@ function setup() {
   
    score = 0  
  redB= new Group();
-
- blueB= new Group();
-
- greenB= new Group();
-
- pinkB= new Group();
  
   arrowGroup= new Group();
 
@@ -96,22 +90,7 @@ function draw() {
 
     gameState=END; 
 }
-  if (arrowGroup.isTouching(blueB)) {
-  blueB.destroyEach();
-  score = score+1;
-  arrowGroup.destroyEach();
-}
-  if (arrowGroup.isTouching(greenB)) {
-  greenB.destroyEach();
-  score = score+1;
-  arrowGroup.destroyEach();
-}
-  if (arrowGroup.isTouching(pinkB)) {
-  pinkB.destroyEach();
-  score = score+1;
-  arrowGroup.destroyEach();
-}
-
+  
 }
  //escreva uma condição para o estado END
  if(gameState === END){
@@ -154,7 +133,7 @@ function blueBalloon() {
   blue.velocityX = 3;
   blue.lifetime = 150;
   blue.scale = 0.1;
-  blueB.add(blue);
+  
 }
 
 function greenBalloon() {
@@ -163,7 +142,7 @@ function greenBalloon() {
   green.velocityX = 3;
   green.lifetime = 150;
   green.scale = 0.1;
-  greenB.add(green);
+  
 }
 
 function pinkBalloon() {
@@ -172,7 +151,7 @@ function pinkBalloon() {
   pink.velocityX = 3;
   pink.lifetime = 150;
   pink.scale = 1
-  pinkB.add(pink);
+  
 }
 
 // Criar flechas para o arco
