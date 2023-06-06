@@ -95,10 +95,8 @@ function draw() {
  //escreva uma condição para o estado END
  if(gameState === END){
  //Adicione o código para destruir o arco
- bow.destroyEach();
+ bow.destroy();
  //defina a velocidade do fundo como 0
- scene.addImage(backgroundImage);
-  scene.scale = 2.5;
  scene.velocityX = 0;
  
 }
